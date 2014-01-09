@@ -18,7 +18,7 @@
 #
 
 default['fisheye']['version']='2.10.0'
-default['fisheye']['parentdir']='/opt'
+default['fisheye']['parentdir']='/usr/local/'
 
 # This is what the Fisheye documentation refers to as the "<Fisheye home directory>"
 default['fisheye']['homedir']="#{node['fisheye']['parentdir']}/fecru-#{node['fisheye']['version']}"
