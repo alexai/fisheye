@@ -34,7 +34,7 @@ attribute "fisheye/zipfile",
 
 attribute "fisheye/url",
     :required => 'optional',
-    :default => 'http://www.atlassian.com/software/fisheye/downloads/binary/crucible-3.2.3.zip'
+    :default => 'http://www.atlassian.com/software/crucible/downloads/binary/crucible-3.2.3.zip'
 
 attribute "fisheye/instdir",
     :required => 'optional',
