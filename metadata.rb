@@ -1,3 +1,4 @@
+name		"fisheye"
 maintainer       "demandforce"
 maintainer_email "yai@dfengg.com"
 license          "All rights reserved"
