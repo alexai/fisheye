@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: crucible
+# Cookbook Name:: fisheye
 # Recipe:: default
 #
 # Copyright 2014, YOUR_COMPANY_NAME
