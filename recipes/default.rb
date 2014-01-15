@@ -24,7 +24,7 @@ end
 execute "install fisheye" do
 	cwd "/usr/local/df"
 	command "unzip crucible-#{node['fisheye']['version']}.zip;ln -s ./fecru-#{node['fisheye']['version']} fecru"
-	action :nothing
+	action :run
 end
 
 
