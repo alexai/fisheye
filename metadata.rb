@@ -19,3 +19,11 @@ attribute "fisheye/version",
 attribute "fisheye/url",
 	:required => 'optional',
 	:default => 'http://www.atlassian.com/software/crucible/downloads/binary'
+
+attribute "fecru/bak/path",
+	:required => 'optional',
+	:default => 'http://172.16.2.20/fisheye/'
+
+attribute "fecru/bak/zip",
+	:required => 'optional',
+	:default => 'fisheyeandcrucible_backup_2014_01_10.zip'
