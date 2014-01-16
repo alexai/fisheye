@@ -27,9 +27,21 @@ execute "Init database" do
 	action :run
 end
 
+execute "Download backup zip" do 
+	cwd "/root"
+	command "wget #{node['fecru']['bak']['path']}/#{node['fecru']['bak']['zip']}"
+	action :run
+end
+
 execute "install fisheye" do
 	cwd "/usr/local/df"
 	command "unzip crucible-#{node['fisheye']['version']}.zip;ln -s ./fecru-#{node['fisheye']['version']} fecru"
+	action :run
+end
+
+execute "Restore fisheye" do
+	cwd "/usr/local/df/fecru/bin"
+	command "nohup ./fisheyectl.sh restore -f /root/#{node['fecru']['bak']['path']}/#{node['fecru']['bak']['zip']}"
 	action :run
 end
 
@@ -38,6 +50,3 @@ execute "Run fisheye" do
 	command "nohup ./start.sh &"
 	action :run
 end
-
-
-
