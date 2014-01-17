@@ -27,3 +27,7 @@ attribute "fecru/bak/path",
 attribute "fecru/bak/zip",
 	:required => 'optional',
 	:default => 'fisheyeandcrucible_backup_2014_01_10.zip'
+
+attribute "jdbc/version",
+	:required => 'optional',
+	:default => '5.1.28'
