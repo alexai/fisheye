@@ -31,3 +31,7 @@ attribute "fecru/bak/zip",
 attribute "jdbc/version",
 	:required => 'optional',
 	:default => '5.1.28'
+
+attribute "bak/finalname",
+	:required => 'optional',
+	:default => 'fisheyecrucible-backup-ready.zip'
