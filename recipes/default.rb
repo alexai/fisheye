@@ -21,12 +21,6 @@ remote_file "/usr/local/df/crucible-#{node['fisheye']['version']}.zip" do
 	action :create
 end
 
-execute "Init database" do
-	cwd "/root"
-	command "mysql -uroot < /root/init.sql"
-	action :run
-end
-
 execute "Download backup zip" do 
 	cwd "/root"
 	command "wget #{node['fecru']['bak']['path']}/#{node['fecru']['bak']['zip']}"
