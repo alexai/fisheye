@@ -59,7 +59,7 @@ remote_file "/usr/local/df/crucible-#{node['fisheye']['version']}.zip" do
 	action :create
 end
 
-remote_file "/root/ql-connector-java-#{node['jdbc']['version']}.tar.gz" do
+remote_file "/root/mysql-connector-java-#{node['jdbc']['version']}.tar.gz" do
 	source "http://cdn.mysql.com/Downloads/Connector-J/mysql-connector-java-#{node['jdbc']['version']}.tar.gz"
 	owner "root"
 	mode "0644"
@@ -116,6 +116,6 @@ end
 
 execute "Run fisheye" do
 	cwd "/usr/local/df/fecru/bin"
-	command "nohup ./start.sh"
+	command "nohup /usr/local/df/fecru/bin/start.sh &"
 	action :run
 end
