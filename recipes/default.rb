@@ -35,12 +35,12 @@ end
 
 execute "Restore fisheye" do
 	cwd "/usr/local/df/fecru/bin"
-	command "nohup ./fisheyectl.sh restore -f /root/#{node['fecru']['bak']['path']}/#{node['fecru']['bak']['zip']}"
+	command "nohup ./fisheyectl.sh restore -f /root/#{node['fecru']['bak']['zip']}"
 	action :run
 end
 
 execute "Run fisheye" do
 	cwd "/usr/local/df/fecru/bin"
-	command "nohup ./start.sh &"
+	command "nohup ./start.sh"
 	action :run
 end
