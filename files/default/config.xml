@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config control-bind="127.0.0.1:8059" version="1.0" admin-hash="76C4A529EB44A72CF45359EF81E43E39">
+    <!-- see example-config.xml and config.xsd for more documentation -->
+    
+ <license SID="BDTO-ID60-9433-R6UL"><crucible>AAABJw0ODAoPeNpNkM1qwzAQhO96CkPPCpbtBBIQtJV8MNhxSRxy6UWRN63AksNKNs3b1/kjOexp5
+5uZ3bc9tFGlzlGSRmy5mi9XjEVCNlESs4RI8BrNKZjecYGDNocOvleR6K0F1EZ1ZD3YA2B93HlAz
+1kcE4GgLoBUAfjFhcZzmmRE9C4oHdbKAt+ooYsahNG4nui78aw0GpyH5nyCq0rUVZVvRPFRPuC8U
+qbjGG7kewtWufbYo4aZ7i3JR9UN13B+VJ0HMsldAKechvzvZPD8KJXSOKOMkRp/lDP+xsin3bPUl
+GpG4AEHINt8zaehCUuzy3u2gCNgIfmnbGpayEVMl1ma0s1iV5L7NdO2LOQrdV+8FBpcZ6wJ0JKvA
+fWv8vDyvGvPfwANiyIwLAIUQBK+mZ/9DwK9uAuFLHL/3wtDHVQCFC2k9LdDzmsmB5Zu3+DDcAHqr
+PTXX02eq</crucible><fisheye>AAABKQ0ODAoPeNpNUMtqwzAQvOsrDD0rSLYTaEDQ1nLBYMclceilF1VeNwJLDpJs6r+v8mpy2MPuz
+M4M8/QJbVSJOYqTKCZrStfLOMp4ExYaIw5OWnX0ajDsXblDPsPXOsoGrcFKJXq0GfU32LrbO7COU
+UJQZkGc+Fx4YCcRTJY4TlE2GC+k3wgNbCvGPmosTMoMNyCvhOqZ9ZfrSwtamLYbrISFHDTKJ9GPZ
+2HWid4B6kIcmGERXtUEzNsRUJAwHowwEvLfo7LzLUSCSYopRbX9EUa5iw6/W6BdvmFhcEyTlATiD
+uwEtuDsjTc1LviK4Oc0SfB2tS9RqSQYBwEtC/74dQUevEfTK608tP95r5xmPsK5i6yuqnybFa8l+
+hitPAgHD9WdU/8B1rmJ3TAtAhQoWQyBMOiP++UB9IG6qi0CP5M5JQIVAIXFLWdFIJ82/V6GVGmxg
+nv1oNV4X02eu</fisheye></license>
+<git-config git-executable="/usr/bin/git"/><hg-config hg-executable="/usr/local/bin/hg"/><web-server site-url="http://localhost:8060">
+        <http bind="0.0.0.0:8060"/>
+    </web-server>
+    
+    <smtp username="fisheye_crucible@dfengg.com" sendEmailsAsActioner="true" starttls="true" from="fisheye_crucible@dfengg.com" host="smtp.gmail.com" password="ondemand" port="587" debug="false"/><security allow-anon="true" allow-cru-anon="true">
+  <built-in>
+   <signup enabled="true"/>
+</built-in>
+<admins><system-admins><user>jingram</user><user>tblair</user><user>mbieser</user><user>rtrevino</user><user>jlee</user><user>yai</user><user>hcheung</user><user>dtripp</user><user>kevinhuang</user><user>lterheyden</user><group>autotester</group></system-admins></admins><avatar><disabled/></avatar><emailVisibility/></security>
+    <properties><property name="com.atlassian.applinks.applinks-plugin:build" value="10"/><property name="applinks.global.application.ids" value="%23java.util.List%0A7a063259-3954-3005-9df8-21c0f279a704%0Aa02e8dd3-13b0-3488-9d6f-c11ce87d763a"/><property name="com.atlassian.oauth.consumer.ConsumerService:host.__HOST_SERVICE__" value="%23java.util.Properties%0A%23Sun+May+20+20%3A20%3A42+GMT+2012%0AprivateKey%3DMIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAJedrxn1ldLWLWFwAWMbP%2F7%2F49FIb5sIjTTQtsEcjf2RkF6gjqB%2BMpWlrYYu6mqow7rxxD32otpG96jd%2FctEvdmjNkvevsPhcCBaFmYUQTDvJalN%2FA8dmpjVFFgkroJbbYbJ47zGa8jbyPQoRbfsW0c%2FVrdI0qUF%2FAfD9li2Cy9rAgMBAAECgYBVLbaZG%2Fr%2FR2qZakatOjr69SI1ir%2BA1w4V1QhHd9Zh1ezI7OUUT7H1lu3lC%2BiQ4Z2NIpTAxxZ5ERPEYGtcTpNlmr5HkuyI7FOfgPBlt4%2BKlPPZcJFeJzeXwTiqoDsuSPU3lYeDrB7ExInDHiCPlpoBCfZA%2BHwk6s27x%2BoL0LLioQJBANkUTJB0HdjFM2rJpIwGwYgssktYvSBYdbTm9TINTFKX4JQb0wJaglBInYFKiL%2BU2d5fjO%2Fwb%2BuCFP8qHcbdnVsCQQCyzLCHFt8Dm%2B3iJwuxQXats6Jsy%2FK8rKDmCLCj%2BsEZYQmxw9EEGA4yPGPO2DaHrHJX6SYWPS1CyPGG0EdY2AMxAkEAtlEIJOKBFsg48N0956Tc8gOoEwQKg5oH8dFv6YOlsFCCe6IKzJU7kTYLosT4qP7ZJJzXf8VOGlv8SnoS3CzQtQJAMN7jzTjCIiFnpu3XM07aWmYEGkqwgUOKAvYTGe77Aq3UUYNdSQouLyr0eN%2F%2BH51R75dpcqCsE1oLMjcRmUYJsQJAMajFxVD25QQnO9xV5bx%2Fh6pqzVI%2FmCsbIeZr%2BMXn860wzNDUbPtopRP2eHXQ4LIynGQGvI3a2d8IbhP5HlWquQ%5C%3D%5C%3D%0Aname%3DFishEye%0Akey%3DFishEye%5C%3A7774857320%0Adescription%3DAtlassian+FishEye+at+http%5C%3A%2F%2F172.16.2.80%5C%3A8060+%0AsignatureMethod%3DRSA_SHA1%0ApublicKey%3DMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCXna8Z9ZXS1i1hcAFjGz%2F%2B%2F%2BPRSG%2BbCI000LbBHI39kZBeoI6gfjKVpa2GLupqqMO68cQ99qLaRveo3f3LRL3ZozZL3r7D4XAgWhZmFEEw7yWpTfwPHZqY1RRYJK6CW22GyeO8xmvI28j0KEW37FtHP1a3SNKlBfwHw%2FZYtgsvawIDAQAB%0A"/><property name="applinks.local.OchoCore.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.OCHO.fecru_project.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.AdminPortal.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.BuildTools.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.Demandforce.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.Ocho.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.PlatformTracking.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.CR.fecru_project.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.CX.fecru_project.linked.entities" value="%23java.util.List%0A"/><property name="plugin.license.storage.callback.url" value="http%3A%2F%2Fdevgit1.dfengg.com%3A8060%2Fplugins%2Fservlet%2Fnl.tweeenveertig.navigator-plugin%2Flicense"/><property name="com.atlassian.oauth.serviceprovider.ServiceProviderTokenStore.tokenKeys" value=""/><property name="com.atlassian.oauth.serviceprovider.ServiceProviderTokenStore.consumerTokens.jira:7996978" value=""/><property name="com.atlassian.oauth.serviceprovider.ServiceProviderTokenStore.userAccessTokens.dtripp" value=""/><property name="com.atlassian.oauth.serviceprovider.ServiceProviderTokenStore.userAccessTokens.rtrevino" value=""/><property name="com.atlassian.oauth.serviceprovider.ServiceProviderTokenStore.userAccessTokens.wli" value=""/><property name="com.atlassian.oauth.serviceprovider.ServiceProviderTokenStore.userAccessTokens.boris" value=""/><property name="com.atlassian.oauth.serviceprovider.ServiceProviderTokenStore.userAccessTokens.apoland" value=""/><property name="com.atlassian.oauth.serviceprovider.ServiceProviderTokenStore.userAccessTokens.lferret" value=""/><property name="applinks.local.admin__admin.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.admin__ladpadmin.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.admin__new__admin.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.autotester.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfaliasupdate.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfbusinessnetwork.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfcache.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfcampaign.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfcellphonelookup.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfclusterfeedcommon.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfcommon.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfcommonconfig.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfcontinuous.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfcore.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfdao.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfemailinbound.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfemailoutbound.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfenterpriseexport.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfgeocode.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfjames.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfmodel.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfmowebapp.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfmtalk.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfnodelookup.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfoptin.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfproperties.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfqueue.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfscripts.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfshortcodeassignment.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfsms.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfsmsinbound.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfsmsoutbound.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfsmsshortcode.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfsmsutils.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfsmtp.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dftestframework.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dftracking.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfutils.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__customerportal.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__D3.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__d34me.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__D3CP.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__dfbilling.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__dfenterpriseoptout.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__dfenterprisereport.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__dfentityschedule.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__dfmobile.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__dfparent.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__dfpostcard.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__dfrest.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__eappend.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__industry__creation.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__new__df.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__newMonthlyReport.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__Redesign__FE.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__registration.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__rest2.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__salesforce.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__scheduler.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3db__database.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3db__datamigrator.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3db__dataprovider.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3db__db.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.demo__demandforce__demo.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.demo__demo.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.deployment__apache__config.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.devops.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.facebook.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.intg__D3One.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.intg__D3OneEasyOnBoarding.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.intg__dflink-serverside.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.intg__dflinkweb.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.intg__one.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.intg__uploadprocessor.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__AVDlgDll.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__config.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__ConfigFiles.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__dcis__final.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__dciszip.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__dfcda.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__DistanceCalculator.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__documentation.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__for__dliu.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__india.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__lib.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__new__CDA.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__newlib.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__noderedirector.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__noderedirectormobile.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__others.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__ProfanityFilter.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__reporting.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__sfdc.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__standalone.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__test.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__tools.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__utils.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.misc__vmsManagement.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.ops__monitoring.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.PlatformAnalytics.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.Syndication.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.test.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.users__people.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.website__df.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.website__new__website.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.website__new__website3.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.ADMINPORTAL.fecru_project.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.ANALYTICS.fecru_project.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.AUTOTESTER.fecru_project.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.cx__dfrules.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.DFLINKWEB.fecru_project.linked.entities" value="%23java.util.List%0A"/><property name="com.atlassian.upm.log.PluginSettingsAuditLogService:log:upm_audit_log_v2" value="%23java.util.List%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1388375609976%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1388374506111%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1388374228314%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1388373913624%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1388367667387%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1387568203356%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1387057653290%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1385950652450%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1384737728043%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D%0A%7B%22username%22%3A%22spudney%22%2C%22date%22%3A1384281829147%2C%22i18nKey%22%3A%22upm.auditLog.install.plugin.success%22%2C%22entryType%22%3A%22PLUGIN_INSTALL%22%2C%22params%22%3A%5B%22Go2Group+HipChat+Plugin%22%2C%22com.go2group.hipchat-fecru%22%2C%221.2%22%5D%7D%0A%7B%22username%22%3A%22FishEye%22%2C%22date%22%3A1383544432795%2C%22i18nKey%22%3A%22upm.auditLog.upm.startup%22%2C%22entryType%22%3A%22UPM_STARTUP%22%2C%22params%22%3A%5B%5D%7D"/><property name="com.atlassian.upm.atlassian-universal-plugin-manager-plugin:build" value="1"/><property name="com.atlassian.upm:notifications:notification-plugin.request" value="%23java.util.List%0A"/><property name="com.atlassian.upm:notifications:notification-edition.mismatch" value="%23java.util.List%0A"/><property name="com.atlassian.upm:notifications:notification-evaluation.expired" value="%23java.util.List%0A"/><property name="com.atlassian.upm:notifications:notification-evaluation.nearlyexpired" value="%23java.util.List%0A"/><property name="com.atlassian.upm:notifications:notification-maintenance.expired" value="%23java.util.List%0A"/><property name="com.atlassian.upm:notifications:notification-maintenance.nearlyexpired" value="%23java.util.List%0A"/><property name="com.atlassian.crucible.plugins.jira-ril.HasCompletedJIRAVersionCheck" value="true"/><property name="com.atlassian.upm.mail.impl.PluginSettingsLicenseEmailStorelicense-emails" value="%23java.util.List%0A"/><property name="applinks.local.autorc.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__dfpayment.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__platform-api.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.d3__PostcardFA.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.intg__dflinkweb__client.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.platform__api.fecru_repository.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.NEWDF.fecru_project.linked.entities" value="%23java.util.List%0A"/><property name="applinks.local.PLATFORMAPI.fecru_project.linked.entities" value="%23java.util.List%0A"/><property name="applinks.admin.7a063259-3954-3005-9df8-21c0f279a704.type" value="jira"/><property name="applinks.admin.7a063259-3954-3005-9df8-21c0f279a704.name" value="Jira+on+Demandforce"/><property name="applinks.admin.7a063259-3954-3005-9df8-21c0f279a704.display.url" value="https%3A%2F%2Fjira.dfengg.com"/><property name="applinks.admin.7a063259-3954-3005-9df8-21c0f279a704.rpc.url" value="https%3A%2F%2Fjira.dfengg.com"/><property name="applinks.admin.7a063259-3954-3005-9df8-21c0f279a704.primary" value="true"/><property name="applinks.application.7a063259-3954-3005-9df8-21c0f279a704.trustedapps.incoming.applicationId" value="jira%3A7996978"/><property name="applinks.admin.7a063259-3954-3005-9df8-21c0f279a704.propertyKeys" value="%23java.util.List%0Atrustedapps.incoming.applicationId%0ASERVER_PROPERTIES"/><property name="applinks.admin.7a063259-3954-3005-9df8-21c0f279a704.auth.6d155ed3bad9279f47057a0913e2596e" value="%23java.util.Properties%0A%23Sat+Apr+20+00%3A54%3A04+PDT+2013%0A"/><property name="applinks.admin.7a063259-3954-3005-9df8-21c0f279a704.providerKeys" value="%23java.util.List%0Acom.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider"/><property name="applinks.admin.a02e8dd3-13b0-3488-9d6f-c11ce87d763a.type" value="bamboo"/><property name="applinks.admin.a02e8dd3-13b0-3488-9d6f-c11ce87d763a.name" value="Ondemand+Bamboo"/><property name="applinks.admin.a02e8dd3-13b0-3488-9d6f-c11ce87d763a.display.url" value="http%3A%2F%2F172.16.2.159%3A8085"/><property name="applinks.admin.a02e8dd3-13b0-3488-9d6f-c11ce87d763a.rpc.url" value="http%3A%2F%2F172.16.2.159%3A8085"/><property name="applinks.admin.a02e8dd3-13b0-3488-9d6f-c11ce87d763a.primary" value="true"/><property name="applinks.application.a02e8dd3-13b0-3488-9d6f-c11ce87d763a.trustedapps.incoming.applicationId" value="7F00000101376BE83400043C56BE06B7"/><property name="applinks.admin.a02e8dd3-13b0-3488-9d6f-c11ce87d763a.propertyKeys" value="%23java.util.List%0Atrustedapps.incoming.applicationId"/><property name="applinks.admin.a02e8dd3-13b0-3488-9d6f-c11ce87d763a.auth.6d155ed3bad9279f47057a0913e2596e" value="%23java.util.Properties%0A%23Sat+Apr+20+00%3A55%3A12+PDT+2013%0A"/><property name="applinks.admin.a02e8dd3-13b0-3488-9d6f-c11ce87d763a.providerKeys" value="%23java.util.List%0Acom.atlassian.applinks.api.auth.types.TrustedAppsAuthenticationProvider"/><property name="com.atlassian.upm:notifications:notification-update" value="%23java.util.List%0A"/><property name="applinks.application.7a063259-3954-3005-9df8-21c0f279a704.SERVER_PROPERTIES" value="%23java.util.Properties%0A%23Mon+Apr+22+13%3A08%3A50+PDT+2013%0AIS_ACTIVITY_ITEM_PROVIDER%3Dfalse%0AIS_ALLOW_UNASSIGNED%3Dfalse%0A"/><property name="HerculesScheduledScanTask.enabled" value="true"/><property name="HerculesScheduledScanTask.startTime" value="18%3A2"/><property name="HerculesScheduledScanTask.recipients" value="kevinhuang%40dfengg.com"/><property name="hipchat-auth-token" value="6f564147569152b408e10d3a5429e5"/><property name="hipchat-repo-d3_new_df" value="329178"/><property name="hipchat-project-NEWDF" value="329178"/><property name="hipchat-project-PLATFORMAPI" value="32270"/></properties><repository-defaults>
+        <linker/>
+        <allow/>
+        <tarball enabled="false" maxFileCount="0"/>
+        <security allow-anon="true" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="true"><required-groups/><required-write-groups/></security>
+    <text-indexer enabled="true"/><watches enabled="true"/><commit-message-syntax syntax="plain"/><changeset-discussions enabled="true"/></repository-defaults>
+
+  
+  
+  <repository name="admin_admin" description="admin" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/admin/admin"><ssh-auth key-name="admin_admin"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="admin_ladpadmin" description="ladpadmin" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/admin/ladpadmin"><ssh-auth key-name="admin_ladpadmin"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="admin_new_admin" description="New Admin" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/admin/new_admin"><ssh-auth key-name="admin_new_admin"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="AdminPortal" description="New Admin Portal repository" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/admin_portal"><ssh-auth key-name="AdminPortal"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  
+  <repository name="api-common" description="api-common" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/api-common"><ssh-auth key-name="api-common"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="autorc" description="" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/ops/autorc"><ssh-auth key-name="autorc"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="autotester" description="" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/autotester"><ssh-auth key-name="autotester"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="BuildTools" description="Build/Release Tools repository" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/build_tools"><ssh-auth key-name="BuildTools"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  
+  
+  
+  
+  <repository name="cx_dfaliasupdate" description="dfaliasupdate" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfaliasupdate"><ssh-auth key-name="cx_dfaliasupdate"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="cx_dfaudit" description="" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfaudit"><ssh-auth key-name="cx_dfaudit"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfbusinessnetwork" description="dfbusinessnetwork" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfbusinessnetwork"><ssh-auth key-name="cx_dfbusinessnetwork"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfcache" description="dfcache" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfcache"><ssh-auth key-name="cx_dfcache"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfcampaign" description="dfcampaign" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfcampaign"><ssh-auth key-name="cx_dfcampaign"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfcellphonelookup" description="cx_dfcellphonelookup" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfcellphonelookup"><ssh-auth key-name="cx_dfcellphonelookup"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfclusterfeedcommon" description="dfclusterfeedcommon" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfclusterfeedcommon"><ssh-auth key-name="cx_dfclusterfeedcommon"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="cx_dfcommon" description="dfcommon" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfcommon"><ssh-auth key-name="cx_dfcommon"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfcommonconfig" description="dfcommonconfig" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfcommonconfig"><ssh-auth key-name="cx_dfcommonconfig"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfcontinuous" description="dfcontinuous" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfcontinuous"><ssh-auth key-name="cx_dfcontinuous"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfcore" description="dfcore" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfcore"><ssh-auth key-name="cx_dfcore"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfdao" description="dfdao" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfdao"><ssh-auth key-name="cx_dfdao"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfemailinbound" description="dfemailinbound" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfemailinbound"><ssh-auth key-name="cx_dfemailinbound"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfemailoutbound" description="dfemailoutbound" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfemailoutbound"><ssh-auth key-name="cx_dfemailoutbound"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfenterpriseexport" description="dfenterpriseexport" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfenterpriseexport"><ssh-auth key-name="cx_dfenterpriseexport"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfgeocode" description="dfgeocode" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfgeocode"><ssh-auth key-name="cx_dfgeocode"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfjames" description="dfjames" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfjames"><ssh-auth key-name="cx_dfjames"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfmodel" description="dfmodel" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfmodel"><ssh-auth key-name="cx_dfmodel"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="cx_dfmowebapp" description="" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfmowebapp"><ssh-auth key-name="cx_dfmowebapp"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfmtalk" description="" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfmtalk"><ssh-auth key-name="cx_dfmtalk"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfnodelookup" description="dfnodelookup" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfnodelookup"><ssh-auth key-name="cx_dfnodelookup"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="cx_dfoptin" description="" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfoptin"><ssh-auth key-name="cx_dfoptin"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfplatform" description="" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfplatform"><ssh-auth key-name="cx_dfplatform"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfproperties" description="dfproperties" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfproperties"><ssh-auth key-name="cx_dfproperties"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfqueue" description="dfqueue" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfqueue"><ssh-auth key-name="cx_dfqueue"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="cx_dfreminders" description="" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfreminders"><ssh-auth key-name="cx_dfreminders"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfreporting" description="dfreporting" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfreporting/"><ssh-auth key-name="cx_dfreporting"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfrules" description="" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfrules"><ssh-auth key-name="cx_dfrules"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfscripts" description="dfscripts" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfscripts"><ssh-auth key-name="cx_dfscripts"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="cx_dfshortcodeassignment" description="dfshortcodeassignment" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfshortcodeassignment"><ssh-auth key-name="cx_dfshortcodeassignment"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfsms" description="dfsms" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfsms"><ssh-auth key-name="cx_dfsms"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="cx_dfsmsinbound" description="dfsmsinbound" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfsmsinbound"><ssh-auth key-name="cx_dfsmsinbound"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfsmsoutbound" description="" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfsmsoutbound"><ssh-auth key-name="cx_dfsmsoutbound"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dfsmsshortcode" description="dfsmsshortcode" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfsmsshortcode"><ssh-auth key-name="cx_dfsmsshortcode"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfsmsutils" description="dfsmsutils" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfsmsutils"><ssh-auth key-name="cx_dfsmsutils"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfsmtp" description="dfsmtp" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfsmtp"><ssh-auth key-name="cx_dfsmtp"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dftemplatebuilder" description="dftemplatebuilder" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dftemplatebuilder"><ssh-auth key-name="cx_dftemplatebuilder"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="cx_dftestframework" description="dftestframework" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dftestframework"><ssh-auth key-name="cx_dftestframework"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dftracking" description="dftracking" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dftracking"><ssh-auth key-name="cx_dftracking"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="cx_dfutils" description="dfutils" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dfutils"><ssh-auth key-name="cx_dfutils"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_campaigns" description="campaigns" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/campaigns"><ssh-auth key-name="d3_campaigns"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="d3_customerportal" description="customerportal" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/customerportal"><ssh-auth key-name="d3_customerportal"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_D3" description="D3" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/D3"><ssh-auth key-name="d3_D3"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="d3_d34me" description="D34me" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/d34me"><ssh-auth key-name="d3_d34me"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="d3_D3CP" description="D3CP" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/D3CP"><ssh-auth key-name="d3_D3CP"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  
+<repository name="d3_dfbilling" description="dfbilling" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/dfbilling"><ssh-auth key-name="d3_dfbilling"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_dfenterpriseoptout" description="dfenterpriseoptout" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/dfenterpriseoptout"><ssh-auth key-name="d3_dfenterpriseoptout"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_dfenterprisereport" description="dfenterprisereport" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/dfenterprisereport"><ssh-auth key-name="d3_dfenterprisereport"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_dfentityschedule" description="dfentityschedule" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/dfentityschedule"><ssh-auth key-name="d3_dfentityschedule"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_dfmobile" description="dfmobile" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/dfmobile"><ssh-auth key-name="d3_dfmobile"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_dfparent" description="dfparent" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/dfparent"><ssh-auth key-name="d3_dfparent"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="d3_dfpayment" description="dfpayment" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/dfpayment"><ssh-auth key-name="d3_dfpayment"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="d3_dfpostcard" description="dfpostcard" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/dfpostcard"><ssh-auth key-name="d3_dfpostcard"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_dfrest" description="dfrest" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/dfrest"><ssh-auth key-name="d3_dfrest"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+<repository name="d3_eappend" description="eappend" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/eappend"><ssh-auth key-name="d3_eappend"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_industry_creation" description="Industry_creation" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/industry_creation"><ssh-auth key-name="d3_industry_creation"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="d3_new_df" description="new_df" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/new_df"><ssh-auth key-name="d3_new_df"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="d3_newMonthlyReport" description="newMonthlyReport" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/newMonthlyReport"><ssh-auth key-name="d3_newMonthlyReport"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="d3_platform-api" description="platform-api" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/platform-api"><ssh-auth key-name="d3_platform-api"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="d3_PostcardFA" description="PostcardFA" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/PostcardFA"><ssh-auth key-name="d3_PostcardFA"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="d3_Redesign_FE" description="Redesign_FE" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/Redesign_FE"><ssh-auth key-name="d3_Redesign_FE"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="d3_registration" description="registration" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/registration"><ssh-auth key-name="d3_registration"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_rest2" description="rest2" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/rest2"><ssh-auth key-name="d3_rest2"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_salesforce" description="salesforce" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/salesforce"><ssh-auth key-name="d3_salesforce"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3_scheduler" description="scheduler" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3/scheduler"><ssh-auth key-name="d3_scheduler"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="d3db_database" description="D3 database" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3db/database"><ssh-auth key-name="d3db_database"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="d3db_datamigrator" description="Migrator data" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3db/datamigrator"><ssh-auth key-name="d3db_datamigrator"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="d3db_dataprovider" description="Data provider" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3db/dataprovider"><ssh-auth key-name="d3db_dataprovider"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="d3db_db" description="d3db" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/d3db/db"><ssh-auth key-name="d3db_db"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+
+  
+<repository name="Demandforce" description="Demandforce CVS Repository" store-diff="true" enabled="true"><cvs dir="/develop"/>
+      <linker/><security allow-anon="true" use-defaults="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+
+  
+
+  
+  
+  
+
+  
+  <repository name="demo_demandforce_demo" description="demandforce_demo" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/demo/demandforce_demo"><ssh-auth key-name="demo_demandforce_demo"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="demo_demo" description="Demo" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/demo/demo"><ssh-auth key-name="demo_demo"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="deployment_apache_config" description="Apache Config" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/deployment/apache_config"><ssh-auth key-name="deployment_apache_config"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="devops" description="Devops chef repository" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/devops"><ssh-auth key-name="devops"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <repository name="dftestframework" description="dftestframework" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/cx/dftestframework"><ssh-auth key-name="dftestframework"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="facebook" description="facebook" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/facebook"><ssh-auth key-name="facebook"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="intg_D3One" description="D3One" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/D3One"><ssh-auth key-name="intg_D3One"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="intg_D3OneEasyOnBoarding" description="D3OneEasyOnBoarding" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/D3OneEasyOnBoarding"><ssh-auth key-name="intg_D3OneEasyOnBoarding"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="intg_dflink" description="dflink (win integrations)" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/dflink"><ssh-auth key-name="intg_dflink-hib1zlos"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="intg_dflink-serverside" description="dflink-serverside" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/dflink-serverside"><ssh-auth key-name="intg_dflink-serverside"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="intg_dflinkweb" description="dflinkweb" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/dflinkweb"><ssh-auth key-name="intg_dflinkweb"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="intg_dflinkweb_client" description="dflinkweb client files" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/dflinkweb_client"><ssh-auth key-name="intg_dflinkweb_client"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="intg_one" description="one" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/one"><ssh-auth key-name="intg_one"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="intg_pita" description="dflink pita test tool (win)" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/pita"><ssh-auth key-name="intg_pita-hib2ij8d"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="intg_sdk" description="dflink sdk (win)" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/sdk"><ssh-auth key-name="intg_sdk-hib2hin8"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="intg_tools" description="dflink tools (win)" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/tools"><ssh-auth key-name="intg_tools-hib2eclz"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="intg_uploadprocessor" description="uploadprocessor" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/intg/uploadprocessor"><ssh-auth key-name="intg_uploadprocessor"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="misc_AVDlgDll" description="AVDlgDll" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/AVDlgDll"><ssh-auth key-name="misc_AVDlgDll"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="misc_config" description="configures" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/config"><ssh-auth key-name="misc_config"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="misc_ConfigFiles" description="misc_ConfigFiles" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/ConfigFiles"><ssh-auth key-name="misc_ConfigFiles"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="misc_dcis_final" description="dcis_final" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/dcis_final"><ssh-auth key-name="misc_dcis_final"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="misc_dciszip" description="dciszip" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/dciszip"><ssh-auth key-name="misc_dciszip"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="misc_dfcda" description="dfcda" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/dfcda"><ssh-auth key-name="misc_dfcda"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="misc_DistanceCalculator" description="DistanceCalculator" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/DistanceCalculator"><ssh-auth key-name="misc_DistanceCalculator"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="misc_documentation" description="documentation" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/documentation"><ssh-auth key-name="misc_documentation"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="misc_for_dliu" description="For Dliu" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/for_dliu"><ssh-auth key-name="misc_for_dliu"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="misc_india" description="india" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/india"><ssh-auth key-name="misc_india"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="misc_lib" description="lib" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/lib"><ssh-auth key-name="misc_lib"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="misc_new_CDA" description="new_CDA" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/new_CDA"><ssh-auth key-name="misc_new_CDA"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="misc_newlib" description="newlib" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/newlib"><ssh-auth key-name="misc_newlib"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="misc_noderedirector" description="noderedirector" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/noderedirector"><ssh-auth key-name="misc_noderedirector"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="misc_noderedirectormobile" description="noderedirectormobile" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/noderedirectormobile"><ssh-auth key-name="misc_noderedirectormobile"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  <repository name="misc_others" description="others" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/others"><ssh-auth key-name="misc_others"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="misc_ProfanityFilter" description="ProfanityFilter" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/ProfanityFilter"><ssh-auth key-name="misc_ProfanityFilter"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="misc_reporting" description="reporting" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/reporting"><ssh-auth key-name="misc_reporting"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="misc_sfdc" description="sfdc" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/sfdc"><ssh-auth key-name="misc_sfdc"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="misc_standalone" description="standalone" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/standalone"><ssh-auth key-name="misc_standalone"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="misc_test" description="test" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/test"><ssh-auth key-name="misc_test"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="misc_tools" description="Tools" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/Tools"><ssh-auth key-name="misc_tools"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="misc_utils" description="Utils" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/utils"><ssh-auth key-name="misc_utils"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="misc_vmsManagement" description="vmsManagement" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/misc/vmsManagement"><ssh-auth key-name="misc_vmsManagement"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+
+  
+<repository name="OchoCore" description="Ocho core repository" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/ocho"><ssh-auth key-name="OchoCore"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="ops_monitoring" description="monitoring" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/ops/monitoring"><ssh-auth key-name="ops_monitoring"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+<repository name="platform_api" description="Platform API" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/platform-api"><ssh-auth key-name="platform_api"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="PlatformAnalytics" description="Platform Analytics source code" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/platform_analytics"><ssh-auth key-name="PlatformAnalytics"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="PlatformTracking" description="Platform Tracking repository" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/platform_tracking"><ssh-auth key-name="PlatformTracking"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="Syndication" description="Syndication (feeds) repository" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/syndication"><ssh-auth key-name="Syndication"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  
+  
+  <repository name="test" description="test" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/test"><ssh-auth key-name="test"/></hg>
+      <linker/><security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="users_people" description="people" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/users/people"><ssh-auth key-name="users_people"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<repository name="website_df" description="website df" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/website/df"><ssh-auth key-name="website_df"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="website_new_website" description="new_website" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/website/new_website"><ssh-auth key-name="website_new_website"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+
+  <repository name="website_new_website3" description="new_website3" store-diff="true" enabled="true"><hg location="ssh://hg@172.16.2.80/website/new_website3"><ssh-auth key-name="website_new_website3"/></hg>
+      <security use-defaults="true" allow-anon="false" allow-logged-in="false" allow-anon-write="false" allow-logged-in-write="false"><required-groups/><required-write-groups/></security>
+</repository>
+<currentApplication><id>AC10025001376BE838881591278420A6</id><publicKey>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgDBumfVEcYST0Lz/6MSL5qOEW9HW/UQtR5B/BhmHr6qYRTNzvXLJ3oMKgViA/am5KpjKtflx6nCQKElfDJpJadW7v5vmVZ2aY5cSODxZM/+4H2YEqsd50er74jg3cY0MfeEOzio4/rVAScm2M71FcBvfLHBrxZHJCZeWJV/UcbYD1QJRtUOEesHnGxdRbIWGAk64+XnwKhkpHMC3uTRsG/fUf93NJ/Vc4K4oQPbg3Zez3jWOneTJzGgLCUiuSmYMrmUdjuPp7JGXbgHyei659KRQjJGTbgC1nGLaAtcjH4DO79IfFbKXLUKVk8O/WKyOQgLkGiC4x27wEVcT95kQmwIDAQAB</publicKey><privateKey>MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCAMG6Z9URxhJPQvP/oxIvmo4Rb0db9RC1HkH8GGYevqphFM3O9csnegwqBWID9qbkqmMq1+XHqcJAoSV8Mmklp1bu/m+ZVnZpjlxI4PFkz/7gfZgSqx3nR6vviODdxjQx94Q7OKjj+tUBJybYzvUVwG98scGvFkckJl5YlX9RxtgPVAlG1Q4R6wecbF1FshYYCTrj5efAqGSkcwLe5NGwb99R/3c0n9VzgrihA9uDdl7PeNY6d5MnMaAsJSK5KZgyuZR2O4+nskZduAfJ6Lrn0pFCMkZNuALWcYtoC1yMfgM7v0h8VspctQpWTw79YrI5CAuQaILjHbvARVxP3mRCbAgMBAAECggEAWSNUhXJr+ZP7RXdnbHDf561k6IRuPwcdhVoROiielaTG5bf1j5M2lKgCshbc+4b934UH0Kp4cFF9rMX4dkcDLbkWKRM7g+Vn6kCuxrQQQ3xaiFrke+zh5PrF1HTK+Qbf3NiW9v2dTGC1J5pAPJIsqtx2v+wcxPGvHiBuo+aTT84JkWs3DXFy5VHIoHt4Xjjho//z0ZOtxgeuwQj6heCmVBzRLMZ7R24a3Aul/TMV4Otw/LKvXzwc7bLi9B2PjtMg/YC1egEdNfGecmENo8rTajY/lKzg9tCXVYnFdNavPY7u0z3qaiXIOTAA82HaOCGjjAx5QTaHNny/ScMM79XF4QKBgQC8eC1KktBI9pZpF/zKLGodZhSK6jaMgcLTXQKJctUuycl1la8xcv4tRh1M+hS0V6COzX3d9zhOmwcJBjdrdZF7G2PcV/i6/sAYnMvvDKVjBR58ABdnQryuJI6nT9psqml9IX+h8vof+CsF4ux5sM7G8FmDB7gSo5J8bzDTqYL0nwKBgQCuHuaNQQGlIcUs+QlbRGoN3ygAtOoY73gJE9lwdI1qAmrrhc+PYfQvQTBWNIT/C0trNzXbvNT+XLl35Rbyok2GfjXuFT6BmeZSpC8dcX0TUVj4XzKeea1VbUMGgjRCCg34S8SJcuRnTfFIcSr2r2rBvKnSPla3MGZLdyx7kIPGhQKBgAnYAQ2XE3fsITkF/rcUkMpOTZ5f00+Na36cqghBzi6ubW5NziO4DNySf+9IVJKCzSkIRJ22TuOUJ07qWzSqpFmYuaOFmMEzkxb2AZTPxUehudDiNFa5Xp9921GT0yW/1NirSj5MMZI/5QderdlBSduMLDCy04NttbX4HMXBYcyjAoGBAJxvJrPBs7ionn3JQJ6+2Imd9FKuN6QvgaimLLTcAjE7+tOfZNttJfVOnB7XEKYTf67T64+AF9xvcjJFoFhdeUlcGxfL/lxx6HxXBf1t+PFiJI0A+nlm2FPn1lACqvCqF+L8L5dNoecuH5j2E6ON9lwZJHm/iCkNUtp6N3zMWZgBAoGANM07O5ISZp2MVLV6KDwAJIfLVqMnfnlGbLp3MCnI4c+nf1XLcYSvvOfW5o5NLSvjbenZr4448qWiymHFya3HR0fWn/EiS5Nqdc8VGwJEUU7BZSpyct45JiaP2W9XSYO950fFzfHRN8HIz9wYgzjzAZnG8G8nKO+NHZdC+yXtZQk=</privateKey></currentApplication><trustedApplication><name>jira:7996978</name><id>jira:7996978</id><publicKey>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkYvW2DGVVw+S3SnDdWwMXa5IGClJ+G9jRRQTH9slMSPVkPNAlaRPgUR0r3TtYITPWRl3/HFPu6kRP1/XHRRvNB4Z0CwyUt8CcGAzm3Peapwn6rnLR3OlyPyxkLTnkG4g1kcgukBGKW66FftON53MmmUdPeuVxpktsa3NEHWUzBvNb/yaUBJTuzeBV82gJxLeao9iUsjsxVdwusVAD5WuumOzYLXzgA7w3YvgEZ/G3of6Vn7Zt9kVAWHAz4KVkw7LERzZRoyY+Fczy/PaQtUkREZpbgLQP3+GE9zh1MbRgWUtB+u8qxAIMQ6/WLpcY31vzh6Ja8QRAcov6R/n2trwrQIDAQAB</publicKey><certificateTimeout>10000</certificateTimeout></trustedApplication><trustedApplication><name>7F00000101376BE83400043C56BE06B7</name><id>7F00000101376BE83400043C56BE06B7</id><publicKey>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtcScfHKCnf/Cc3ly6cQA8e7J14rg/Clga2HMFmVTDt6vuw8YdsdfVGAfe3R4R7fpl1jjRUkpP9GbkGkNkbUq/Id5i9etVKwF1OP2u1wiwEt1ut3vezcegUfDGZDz4oOozuepbZPkMaH7xBop7UdVVD2q9W5t7K06dgXI1VmX2FC/JEbejfPgfm2uYwRwjfuUKM32Gh18PaIbTk0F8TvGB/iOEfAbntN8ey6AZM5wRpym1sc4/mtmxjI9zekoow0LxvPwlaK6NKhA57as95iDZYhNgloQtOa6fn4v1YNbPfrLOW5sH5ZfSzstWcv8ztxcUVpjer261sSV8LvQ4x17wQIDAQAB</publicKey><certificateTimeout>10000</certificateTimeout></trustedApplication><backup><schedule enabled="true"><prefix>fisheyeandcrucible_backup_</prefix><date-pattern>yyyy_MM_dd</date-pattern><frequency>DAILY</frequency><time>06:00</time><items><item name="sql"/><item name="templates"/><item name="ao"/><item name="plugins"/><item name="uploads"/></items></schedule></backup><check-for-updates enabled="true"/><database type="mysql"><connection jdbcurl="jdbc:mysql://localhost:3306/fisheye" driver="com.mysql.jdbc.Driver" driverSource="bundled" username="fisheye" password="fisheye"/><parameters>useUnicode=true
+characterEncoding=UTF8
+connectionCollation=UTF8_bin
+</parameters></database><snippet/><repository-management repositories-root="/usr/local/df/fecru-data/managed-repos"/></config>
